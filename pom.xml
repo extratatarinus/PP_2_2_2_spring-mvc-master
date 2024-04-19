@@ -12,6 +12,11 @@
 
     <properties>
         <spring.version>5.3.14</spring.version>
+        <hibernate.version>5.6.3.Final</hibernate.version>
+        <mysql-connector.version>8.0.33</mysql-connector.version>
+        <dbcp2.version>2.1.1</dbcp2.version>
+        <javax.servlet.version>4.0.1</javax.servlet.version>
+        <thymeleaf.version>3.0.14.RELEASE</thymeleaf.version>
     </properties>
 
     <dependencies>
@@ -22,10 +27,42 @@
             <version>${spring.version}</version>
         </dependency>
 
+        <!-- Database -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>${dbcp2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>jta</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+        <!-- WEB -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>4.0.1</version>
+            <version>${javax.servlet.version}</version>
             <scope>provided</scope>
         </dependency>
 
@@ -33,7 +70,7 @@
         <dependency>
             <groupId>org.thymeleaf</groupId>
             <artifactId>thymeleaf-spring5</artifactId>
-            <version>3.0.14.RELEASE</version>
+            <version>${thymeleaf.version}</version>
         </dependency>
 
     </dependencies>
